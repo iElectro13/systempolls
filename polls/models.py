@@ -9,6 +9,9 @@ class Poll(models.Model):
     def __str__(self):
         return self.question
 
+    def get_choices(self):
+        return Choice.objects.filter(poll=self)
+
 
 class Choice(models.Model):
     poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
