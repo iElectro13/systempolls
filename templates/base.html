@@ -9,14 +9,19 @@
     <title>SystemPolls</title>
 </head>
 
-<body class="min-h-screen w-full flex flex-col justify-center items-center gap-8">
+<body class="min-h-screen w-full flex flex-col justify-between items-center gap-8 bg-neutral-200 text-center">
 
-    <h1 class="text-4xl font-bold">Welcome to SystemPolls</h1>
+    {% include 'navbar.html' %}
 
+
+    <div class="flex flex-col justify-center items-center gap-8 bg-neutral-50 p-8 rounded  sm:w-11/12 md:w-10/12 lg:w-3/5 shadow shadow-lg">
 
         {% block content %}
 
         {% endblock %}
+    </div>
+
+    {% include 'footer.html' %}
 
 
 

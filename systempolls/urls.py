@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path
-from polls.views import polls, poll, results
+from polls.views import polls, poll, results, index
 
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('' , index, name='index'),
     path('polls/', polls, name='polls'),
     path('polls/<int:poll_id>/', poll, name='poll'),
     path('polls/<int:poll_id>/results/', results, name='results'),

@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Poll, Choice, Vote
 
-# Create your views here.
+
+def index(request):
+    return render(request, 'polls/index.html')
+
 def polls(request):
     polls = Poll.objects.all()
     choices = Choice.objects.all()

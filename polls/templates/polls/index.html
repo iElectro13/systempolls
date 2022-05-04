@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1 class="text-4xl font-bold">Bienvenido a SystemPolls</h1>
+
+<p class="text-center">En este sitio encontrarás las mejores encuestas anónimas.<br>Próximamente podrás registrarte y crear tus propias encuestas.</p>
+
+<a href="{% url 'polls' %}" class="w-full p-2 bg-sky-400 rounded font-bold">
+    Ver encuestas
+</a>
+
+{% endblock %}
